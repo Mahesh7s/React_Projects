@@ -15,7 +15,7 @@ export default function ProductDetails(){
 		console.log(dataa)
 		setProduct(dataa)
 	}
-	useEffect(()=>{fetchProduct()},[])
+	useEffect(()=>{fetchProduct()},[id])
 
 
 	return(
