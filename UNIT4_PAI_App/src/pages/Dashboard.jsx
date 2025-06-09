@@ -10,8 +10,12 @@ useEffect(()=>fetchData(),[])
 async function fetchData(){
 let res = await fetch(base);
 		let data = await res.json();
-		let main = await fetch(data.url)
-		console.log(await main.json())
+		console.log(data)
+		let arr = data.results[0].url
+		let load = await fetch(arr)
+		let loaddata= await load.json();
+		console.log(loaddata)
+		// console.log(await main.json())
 }
 
 
